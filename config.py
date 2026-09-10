@@ -1,12 +1,15 @@
+from dotenv import load_dotenv
 import os
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "ВСТАВЬ_СЮДА_ТОКЕН")
+load_dotenv()
 
-# Алфавит для кода комнаты (без 0/O, 1/I/L)
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN не задан. Создайте файл .env с BOT_TOKEN=...")
+
 ROOM_CODE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"
 ROOM_CODE_LENGTH = 6
 
-# Автоочистка
 REPORT_TTL_HOURS = 48
 REMINDER_MINUTES_DEFAULT = 15
 
