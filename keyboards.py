@@ -38,7 +38,7 @@ def kb_dom_main() -> ReplyKeyboardMarkup:
         keyboard=[
             [KeyboardButton(text=BTN_MY_TASKS), KeyboardButton(text=BTN_CREATE_TASK)],
             [KeyboardButton(text=BTN_PENDING_REPORTS)],
-            [KeyboardButton(text=BTN_MY_ROOM)],
+            [KeyboardButton(text=BTN_MY_ROOM), KeyboardButton(text="🚪 Выйти из комнаты")],
         ],
         resize_keyboard=True
     )
@@ -49,7 +49,7 @@ def kb_sub_main() -> ReplyKeyboardMarkup:
         keyboard=[
             [KeyboardButton(text=BTN_MY_TASKS)],
             [KeyboardButton(text=BTN_SEND_REPORT)],
-            [KeyboardButton(text=BTN_MY_ROOM)],
+            [KeyboardButton(text=BTN_MY_ROOM), KeyboardButton(text="🚪 Выйти из комнаты")],
         ],
         resize_keyboard=True
     )
